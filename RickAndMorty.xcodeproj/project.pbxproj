@@ -28,11 +28,26 @@
 		40D6A05F30545D56002A9522 /* RickAndMortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D6A06930545D56002A9522 /* RickAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D6A08830545D8E002A9522 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		40D6A095305461D4002A9522 /* RickAndMorty.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RickAndMorty.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		40D6A09230545FD3002A9522 /* Exceptions for "RickAndMorty" folder in "RickAndMortyTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Utilities/IILocalizationUtilities.swift,
+				"Utilities/String+RickAndMorty.swift",
+			);
+			target = 40D6A05E30545D56002A9522 /* RickAndMortyTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		40D6A05430545D55002A9522 /* RickAndMorty */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				40D6A09230545FD3002A9522 /* Exceptions for "RickAndMorty" folder in "RickAndMortyTests" target */,
+			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
 		};
@@ -76,6 +91,7 @@
 		40D6A04930545D55002A9522 = {
 			isa = PBXGroup;
 			children = (
+				40D6A095305461D4002A9522 /* RickAndMorty.xctestplan */,
 				40D6A08830545D8E002A9522 /* README.md */,
 				40D6A05430545D55002A9522 /* RickAndMorty */,
 				40D6A06230545D56002A9522 /* RickAndMortyTests */,
@@ -406,7 +422,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T299FTZX45;
+				DEVELOPMENT_TEAM = 687K9QLJNB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -435,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T299FTZX45;
+				DEVELOPMENT_TEAM = 687K9QLJNB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
