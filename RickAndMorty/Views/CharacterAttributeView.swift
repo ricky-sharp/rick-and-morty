@@ -1,5 +1,5 @@
 //
-//  AttributeView.swift
+//  CharacterAttributeView.swift
 //  RickAndMorty
 //
 //  Created by Ricky Sharp on 9/11/2026.
@@ -19,6 +19,7 @@ struct CharacterAttributeView: View {
 				.font(.callout)
 		}
 		.padding(.vertical, 8)
+		.accessibilityElement(children: .combine)
     }
 }
 

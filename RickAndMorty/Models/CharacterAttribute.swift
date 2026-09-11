@@ -12,6 +12,7 @@ enum CharacterAttributeKind: Int, CaseIterable {
 	case status
 	case origin
 	case type
+	case created
 	
 	var localizedPrompt: String {
 		switch self {
@@ -23,6 +24,8 @@ enum CharacterAttributeKind: Int, CaseIterable {
 				"Origin"
 			case .type:
 				"Type"
+			case .created:
+				"Created"
 		}
 	}
 }

@@ -12,9 +12,8 @@ struct CharacterListItemView: View {
 
     var body: some View {
 		HStack {
-			Rectangle()
+			CharacterImageView(imageURL: character.image)
 				.frame(width: 100, height: 100)
-				.foregroundStyle(.gray)
 			VStack(alignment: .leading) {
 				Text(character.name)
 					.font(.headline)

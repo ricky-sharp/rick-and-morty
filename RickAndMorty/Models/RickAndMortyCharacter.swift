@@ -17,17 +17,20 @@ struct RickAndMortyCharacter: Decodable, Hashable, Identifiable, Sendable {
 	let name: String
 	let status: String
 	let species: String
-	let type: String?
+	let image: String
 	let origin: Origin
-	let created: Date
+	let type: String?
+	let created: Date?
 	
 	enum CodingKeys: String, CodingKey {
 		case id
 		case name
 		case status
 		case species
-		case type
+		case image
 		case origin
+		case type
+		case created
 	}
 	
 	init(from decoder: any Decoder) throws {
@@ -37,13 +40,16 @@ struct RickAndMortyCharacter: Decodable, Hashable, Identifiable, Sendable {
 		self.status = try container.decode(String.self, forKey: .status).normalized
 		self.species = try container.decode(String.self, forKey: .species).normalized
 		self.origin = try container.decode(Origin.self, forKey: .origin)
+		self.image = try container.decode(String.self, forKey: .image)
 		
 		let type = try container.decode(String.self, forKey: .type).normalized
 		
 		self.type = type.isEmpty ? nil : type
 		
-		//FIXME: Wire up date
-		self.created = .now
+		let createdISO8601 = try container.decode(String.self, forKey: .created)
+		let created = try? Date(createdISO8601, strategy: .iso8601)
+		
+		self.created = created
 	}
 }
 
@@ -56,6 +62,7 @@ extension RickAndMortyCharacter {
 		self.origin = Origin(name: originName, url: "")
 		self.type = type
 		self.created = .now
+		self.image = ""
 	}
 }
 
@@ -72,6 +79,12 @@ extension RickAndMortyCharacter {
 				case .type:
 					if let type {
 						.init(kind: .type, value: type)
+					} else {
+						nil
+					}
+				case .created:
+					if let created {
+						.init(kind: .created, value: created.formatted(as: .standard))
 					} else {
 						nil
 					}

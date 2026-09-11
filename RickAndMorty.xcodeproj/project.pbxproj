@@ -50,6 +50,7 @@
 				"Networking/URLSession+RickAndMorty.swift",
 				Utilities/IILocalizationUtilities.swift,
 				"Utilities/String+RickAndMorty.swift",
+				Views/CharacterImageView.swift,
 			);
 			target = 40D6A05E30545D56002A9522 /* RickAndMortyTests */;
 		};

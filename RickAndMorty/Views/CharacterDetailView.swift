@@ -17,9 +17,9 @@ struct CharacterDetailView: View {
 
     var body: some View {
         VStack {
-			Rectangle()
-				.frame(maxWidth: .infinity, maxHeight: 300)
-				.foregroundStyle(.gray)
+			CharacterImageView(imageURL: character.image)
+				.frame(maxWidth: .infinity)
+				.aspectRatio(1, contentMode: .fit)
 			VStack {
 				ForEach(attributes) { attribute in
 					CharacterAttributeView(attribute: attribute)
