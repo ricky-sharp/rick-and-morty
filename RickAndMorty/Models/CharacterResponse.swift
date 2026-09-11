@@ -16,5 +16,5 @@ nonisolated struct CharacterInfo: Decodable, Sendable {
 
 nonisolated struct CharacterResponse: APIResponse, Sendable {
 	let info: CharacterInfo
-	let results: [RickAndMorty.Character]
+	let results: [RickAndMortyCharacter]
 }

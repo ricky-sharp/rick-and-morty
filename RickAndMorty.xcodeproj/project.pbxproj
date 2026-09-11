@@ -35,9 +35,11 @@
 		40D6A09230545FD3002A9522 /* Exceptions for "RickAndMorty" folder in "RickAndMortyTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Models/Character.swift,
+				Models/CharacterAttribute.swift,
 				Models/CharacterRequest.swift,
 				Models/CharacterResponse.swift,
+				Models/CharacterSearchViewModel.swift,
+				Models/RickAndMortyCharacter.swift,
 				Networking/APIError.swift,
 				Networking/APIParameters.swift,
 				Networking/APIRequest.swift,
