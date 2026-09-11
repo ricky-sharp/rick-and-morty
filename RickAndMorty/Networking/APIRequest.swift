@@ -15,7 +15,7 @@ protocol APIRequest {
 	var endpoint: Endpoint { get }
 }
 
-struct NoParameters: APIParameters {
+nonisolated struct NoParameters: APIParameters {
 	var queryItems: [URLQueryItem]? {
 		nil
 	}
