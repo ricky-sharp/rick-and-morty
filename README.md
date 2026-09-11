@@ -22,6 +22,7 @@
 
 ## Future Improvements
 + Deal with error 1 to show "NoResultsView" instead of "ErrorView"
++ Make NetworkManager @concurrent (initial pass wrecked havoc with AsyncImage)
 + Initial load of results
 + Only search after a pause in modifying the search phrase (e.g. 0.25 to 0.5 seconds)
 + Add proper paging (working with next and prev properities)
